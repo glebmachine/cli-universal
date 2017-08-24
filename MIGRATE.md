@@ -13,3 +13,7 @@ document.addEventListener('DOMContentLoaded', main, false);
 ```
 - Из app.module.ts вычистить лишнее, привратив его в app-routing.module.ts
 - Сгенерить тестовых модулей
+- Поправить шаблон и добавить роутинг
+
+- Добавить tsconfig.server.json
+- Добавить webpack конфиг
