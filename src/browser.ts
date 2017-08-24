@@ -8,4 +8,8 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+export function main() {
+  return platformBrowserDynamic().bootstrapModule(AppModule);
+}
+
+document.addEventListener('DOMContentLoaded', main, false);
