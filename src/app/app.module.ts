@@ -1,7 +1,8 @@
+import { IndexComponent } from './index/index.component';
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -9,12 +10,11 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({
-      appId: 'my-app-id'
-    }),
-    AppRoutingModule
+    RouterModule.forRoot([
+      { path: '', loadChildren: './index/index.module.ts#IndexModule' },
+      { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule'}
+    ])
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports: [ AppComponent ]
 })
 export class AppModule { }

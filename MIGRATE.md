@@ -11,9 +11,5 @@ export function main() {
 
 document.addEventListener('DOMContentLoaded', main, false);
 ```
-- Добавить
-```
-  BrowserModule.withServerTransition({
-    appId: 'my-app-id'
-  })
-```
+- Из app.module.ts вычистить лишнее, привратив его в app-routing.module.ts
+- Сгенерить тестовых модулей
